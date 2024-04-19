@@ -1,0 +1,11 @@
+<form action="/editar/{{usuario._id}}" method="POST" class="form-signin align-self-center">
+    <h1 class="h3 mb-3 font-weight-normal">Edición de usuario</h1>
+    <label for="inputUsername" name="" class="sr-only">Nombre</label>
+    <input type="text" id="inputUsername" name="nombre" class="form-control" placeholder="Nombre" value="{{usuario.nombre}}" required autofocus >
+    <label for="inputEmail" class="sr-only">Email</label>
+    <input type="text" id="inputEmail" name="email" class="form-control" placeholder="Email" value="{{usuario.email}}" required >
+    <label for="inputPassword" class="sr-only">Contraseña</label>
+    <input type="password" id="inputPassword" name="contrasenya" class="form-control" placeholder="Contraseña" value="{{usuario.contrasenya}}" required >
+    <br>
+    <button class="btn btn-lg btn-primary btn-block" id="registrar" type="submit">Guardar Usuario</button>
+</form>

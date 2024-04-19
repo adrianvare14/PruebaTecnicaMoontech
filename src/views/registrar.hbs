@@ -1,0 +1,40 @@
+<form action="usuario/add" method="POST" class="form-signin align-self-center">
+    <h1 class="h3 mb-3 font-weight-normal">REGISTRO DE USUARIOS</h1>
+    <label for="inputUsername" name="" class="sr-only">Nombre</label>
+    <input type="text" id="inputUsername" name="nombre" class="form-control" placeholder="Nombre" required autofocus>
+    <label for="inputEmail" class="sr-only">Email</label>
+    <input type="text" id="inputEmail" name="email" class="form-control" placeholder="Email" required>
+    <label for="inputPassword" class="sr-only">Contraseña</label>
+    <input type="password" id="inputPassword" name="contrasenya" class="form-control" placeholder="Contraseña" required>
+    <br>
+    <button class="btn btn-lg btn-primary btn-block" id="registrar" type="submit">Registrar Usuario</button>
+</form>
+
+<br>
+
+<a href="/logs" class="btn btn-lg btn-primary btn-block">Ver Logs</a>
+
+<br>
+
+<h1 class="h3 mb-3 font-weight-normal">LISTA DE USUARIOS</h1>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Email</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>{{#each usuarios}}
+        <tr>
+            <td>{{nombre}}</td>
+            <td>{{email}}</td>
+            <td>
+                <a href="/editar/{{_id}}" class="btn btn-lg btn-primary btn-block">Editar</a>
+                <a href="/eliminar/{{_id}}" class="btn btn-lg btn-primary btn-block">Eliminar</a>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>

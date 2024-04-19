@@ -1,0 +1,17 @@
+<h1 class="h3 mb-3 font-weight-normal">LOGS</h1>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Email</th>
+            <th>Fecha y hora de inicio</th>
+        </tr>
+    </thead>
+    <tbody>{{#each logUsuarios}}
+        <tr>
+            <td>{{email}}</td>
+            <td>{{createdAt}}</td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
